@@ -31,7 +31,13 @@ public class Demo extends TestBase {
               WebElement clickAddPromoCode = driver.findElement(By.cssSelector(".Actions>button[class='Apply-Button Show-Promo-Code-Button']"));
         clickAddPromoCode.click();
 
+        WebElement addPromoCodeNumber = driver.findElement(By.xpath("//input[@class='Promo-Code-Value']"));
+        addPromoCodeNumber.click();
+        ReusableMethods.myWait(2);
+        addPromoCodeNumber.sendKeys("1478998563214");
 
+        WebElement applyButtonClick = driver.findElement(By.xpath("//button[@class='Promo-Apply']"));
+        applyButtonClick.click();
 
 
 
